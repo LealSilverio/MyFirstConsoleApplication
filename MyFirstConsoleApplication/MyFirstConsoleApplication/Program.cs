@@ -7,13 +7,14 @@
             string name = "Sara Leal Silverio", location = "São Paulo, Brazil";
             var currentDate = DateTime.Now;
             DateTime christmas = new DateTime(2023, 12, 25);
-            var dateDifference = christmas - currentDate;
+            double dateDifference = (christmas - currentDate).TotalDays;
+            int number = (int)dateDifference;
 
 
             Console.WriteLine($"My name is {name}");
             Console.WriteLine($"I am from {location}");
-            Console.WriteLine($"Today's date is {currentDate:d}");
-            Console.WriteLine($"There are {dateDifference} days until Christmas");
+            Console.WriteLine($"Today's date is {currentDate.ToString("d")}");
+            Console.WriteLine($"There are {number} days until Christmas");
 
             // example from section 2.1 in the C# Programming Yellow Book by Rob Miles
             Console.WriteLine("\nThis is the example from section 2.1 in the C# Programming Yellow Book by Rob Miles.\n");
